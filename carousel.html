@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Carousel</title>
+<style>
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background: #656476;
+    background: -webkit-linear-gradient(top, #000, #656476);
+    background: -moz-linear-gradient(top, #000, #656476);
+    background: -ms-linear-gradient(top, #000, #656476);
+}
+#carousel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#panels {
+    padding: 0;
+    margin: 0;
+    list-style-type:none;
+    width: 100%;
+    height: 310px;
+    position: absolute;
+    top: 50%;
+    margin-top: -150px;
+    overflow: hidden;
+}
+.panel {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    background: #0065c0;
+    background: -webkit-linear-gradient(top, #0065c0, #0a4593);
+    background: -moz-linear-gradient(top, #0065c0, #0a4593);
+    background: -ms-linear-gradient(top, #0065c0, #0a4593);
+
+    box-shadow: 0 0 10px #000;
+    -webkit-box-shadow: 0 0 10px #000;
+    -moz-box-shadow: 0 0 10px #000;
+
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    display: block;
+}
+.current {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+}
+.prev{
+    position: absolute;
+    left: -100px;
+}
+.next{
+    position: absolute;
+    right: -100px;
+}
+.prev, .next {
+    margin-top: 40px;
+}
+.hidden {
+    display: none;
+}
+</style>
+</head>
+
+<body onload="carousel.init()">
+<div id="carousel">
+    <ul id="panels">
+        <li class="panel">0</li>
+        <li class="panel">1</li>
+        <li class="panel">2</li>
+        <li class="panel">3</li>
+        <li class="panel">4</li>
+        <li class="panel">5</li>
+        <li class="panel">6</li>
+        <li class="panel">7</li>
+        <li class="panel">8</li>
+        <li class="panel">9</li>
+    </ul>
+</div>
+<script type="text/javascript">
+var carousel = {
+    // Array to keep track of the panels
+    panels: document.getElementsByClassName('panel'),
+    // Current index
+    current: 0,
+    init: function(){
+        document.addEventListener('keyup', carousel.keyControl);        
+        carousel.resetPanels();
+    },
+    resetPanels: function(){       
+        // Hide all the panels.
+        var panels = carousel.panels;
+        for(var i = 0; i < panels.length; i++){
+            panels[i].classList.add('hidden');
+            panels[i].classList.remove('current');
+            panels[i].classList.remove('next');
+            panels[i].classList.remove('prev');
+            
+            panels[i].removeEventListener('click', carousel.goToNextSlide);
+            panels[i].removeEventListener('click', carousel.goToPreviousSlide);
+        }
+        
+        // Fix current index if it is out of bounds.
+        if(carousel.current < 0){
+            carousel.current = panels.length - 1;
+        }
+        else if(carousel.current > panels.length - 1){
+            carousel.current = 0
+        }
+        // Expose current panel.              
+        panels[carousel.current].classList.add('current');
+        panels[carousel.current].classList.remove('hidden');
+        
+        // Fix/expose next panel.
+        var nextIndex = carousel.current + 1;
+        if(nextIndex > panels.length - 1){
+            nextIndex = 0;
+        }
+        panels[nextIndex].classList.add('next');
+        panels[nextIndex].classList.remove('hidden');
+        
+        // Fix/expose previous panel.
+        var prevIndex = carousel.current - 1;
+        if(prevIndex < 0){
+            prevIndex = panels.length - 1;
+        }
+        panels[prevIndex].classList.add('prev');
+        panels[prevIndex].classList.remove('hidden');  
+        
+        // Add new event listeners.         
+        document.getElementsByClassName('next')[0].addEventListener('click', carousel.goToNextSlide);
+        document.getElementsByClassName('prev')[0].addEventListener('click', carousel.goToPreviousSlide);
+    },
+    keyControl: function(event){
+        if(event.keyCode == 37){ // Left arrow
+            carousel.goToPreviousSlide();
+        }
+        else if(event.keyCode == 39){ // Right arrow
+            carousel.goToNextSlide();
+        }
+    },
+    goToNextSlide: function(){
+        carousel.current++;
+        carousel.resetPanels();
+    },
+    goToPreviousSlide: function(){
+        carousel.current--;
+        carousel.resetPanels();
+    }    
+};
+</script>
+</body>
+</html>
