@@ -9,6 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/site.css" rel="stylesheet" />
     <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Average+Sans' rel='stylesheet' type='text/css' />
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,6 +31,7 @@
                         <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
                         <li><a href="#work"><i class="icon-briefcase icon-white"></i> Work History</a></li>
                         <li><a href="#tools"><i class="icon-wrench icon-white"></i> Tools</a></li>                        
+                        <li><a href="#contact"><i class="icon-envelope icon-white"></i> Contact</a></li>                        
                     </ul>
                 </div>
             </div>
@@ -45,17 +47,25 @@
                     </div>
                     <div class="span9">
                         <p class="lead">Hey folks, Marlon here. I am a full stack web developer living in the San Francisco Bay Area with
-                        over five years of professional experience in Python, Java, HTML5, CSS3, and Javascript. I am also a
+                        over five years of professional experience in Python, Java, HTML, CSS, and Javascript. I am also a
                         pianist, aspiring photographer, karaoke regular, and enthusiastic foodie.</p>                
                     </div>
                 </div>
             </div>
         </section>        
         <section id="work">
-            <h1>Workin' it</h1>
+            <h2>Workin' it</h2>
+            <p>I have had the pleasure of working on a variety of web projects, from simple mobile pages to an AJAX-driven analytics dashboard.</p>
             <ul>
+                <li><a href="http://dishcrawl.com" target="_blank">Dishcrawl</a></li>
+                <li>via Questus:
+                    <ul>
+                        <li><a href="http://hubzu.com" target="_blank">Hubzu</a></li>
+                        <li><a href="http://geoex.com" target="_blank">GeoEx</a></li>
+                        <li><a href="http://capitalonecup.com" target="_blank">Capital One Cup</a></li>
+                    </ul>
+                </li>
                 <li><a href="http://playhaven.com" target="_blank">PlayHaven</a></li>
-                <li><a href="http://rogerniner.com" target="_blank">Roger Niner's Karaoke Extravaganza</a></li>                
                 <li><a href="http://blazinbanter.com" target="_blank">Blazin' Banter</a></li>                
                 <li><a href="http://snapguide.com" target="_blank">Snapguide</a></li>
                 <li><a href="http://delicious.com" target="_blank">Delicious</a></li>
@@ -67,8 +77,8 @@
         </section>
         <hr/>         
         <section id="tools">
-            <h2>Tools</h2>
-                <p>Don't get me wrong; I don't mind developing using Linux tools,
+            <h2>Apps for Development</h2>
+            <p>Don't get me wrong; I don't mind developing using Linux tools,
                 but to increase my productivity and efficiency, I 
                 prefer to develop with these great tools:</p>
 
@@ -82,13 +92,20 @@
                 <li><a href="http://getfirebug.com" target="_blank">
                     Firebug</a></li>
                 <li><a href="https://developers.google.com/speed/pagespeed" target="_blank">Google PageSpeed</a></li>
+                <li><a href="http://jshint.com" target="_blank">JSHint</a></li>                
+                <li><a href="http://jsbeautifier.org" target="_blank">JSBeautifier</a></li>
                 <li><a href="http://www.adobe.com/products/photoshopfamily.html" 
                     target="_blank">Adobe Photoshop</a></li>
                 <li><a href="http://gimp.org" target="_blank">GIMP</a></li>
                 <li><a href="http://imageoptim.com" target="_blank">ImageOptim</a></li>
-                <li><a href="http://spritecow.com" target="_blank">SpriteCow</a></li>                
+                <li><a href="http://spritecow.com" target="_blank">SpriteCow</a></li>
             </ul> 
         </section>            
+        <hr/>
+        <section id="contact">
+            <h2>Got something to say?</h2>
+            <p>Feel free to contact me via the links below, and I will get back to you as soon as I can. Thanks for visiting!</p>
+        </section>
     </div> <!-- /container -->
     <div class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="navbar-inner">
@@ -105,5 +122,16 @@
     </div>    
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36122170-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </body>
 </html>
