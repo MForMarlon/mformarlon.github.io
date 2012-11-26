@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marlon Evangelista">
+    <title>Code Sample for R/GA</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Average+Sans' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body id="index" class="home">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <span class="brand">Header for Code Sample</span>
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li><a href="#">Link that goes nowhere</a></li>
+                        <li><a href="#">Another link that goes nowhere</a></li>
+                        <li><a href="#">You can guess where this link goes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="intro">    
+            <div class="hero-unit">
+                <p>Hey R/GA, <a href="mailto:icecold29@gmail.com">Marlon</a> here
+                   with my front-end code sample. Here's a quick summary of 
+                   what I did:
+                   <ul>
+                       <li>Included 
+                   <a href="http://twitter.github.com/bootstrap" target="_blank">
+                   Twitter Bootstrap</a> (with its responsive feature) and 
+                   structured the page to adhere to its guidelines.</li>
+                       <li>Added a static header and footer bar to give the page
+                   some uniformity. If this eventually evolves to a site 
+                   with multiple pages, navigating becomes easy since the user
+                   does not have to scroll up and down to access the links.</li>
+                       <li>Chose the Google Web Font, 
+                   <a href="http://www.google.com/webfonts/specimen/Average+Sans"
+                   target="_blank">Average Sans</a>, for readability and its subtle use
+                   of slants and curves in the characters to give the page some
+                   personality.</li>
+                       <li>Now the interesting part: Made two simple AJAX calls
+                   to grab tweets from R/GA's Twitter account, as well as posts 
+                   from R/GA's Facebook page. Each post and tweet is parsed via
+                   regex to look for mentions, hashtags, and links. Then each 
+                   is displayed one at a time via a 5 second interval, along with
+                   the appropriate social-media call-to-actions.</li>
+                       <li>Included Google Analytics to track page viewing.</li>
+                </ul>
+                <p>Last but not least, thanks for taking the time to interview me, as well as viewing this page!</p>                
+            </div>
+        </section>        
+        <section id="social-media">
+            <div class="row">
+                <div class="span6">
+                    <h1>R/GA Tweets</h1>
+                    <div id="rga-tweets"></div>
+                </div>
+                <div class="span6">
+                    <h1>R/GA Facebook Posts</h1>
+                    <div id="rga-posts"></div>
+                </div>
+            </div>
+        </section>
+    </div> <!-- /container -->
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="navbar-inner">
+            <div class="container">
+                <span class="brand">Footer for Code Sample</span>
+            </div>
+        </div>
+    </div>    
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/rga.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36122170-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+</html>
