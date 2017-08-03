@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Github page for Marlon Evangelista, web developer.">
+    <meta name="author" content="Marlon Evangelista">
+    <title>marlon || evangelista</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body id="index" class="home">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <span class="brand">MARLON EVANGELISTA</span>
+                <div class="nav-collapse collapse pull-right">
+                    <ul class="nav">
+                        <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+                        <li><a href="#work"><i class="icon-briefcase icon-white"></i> Work History</a></li>
+                        <li><a href="#tools"><i class="icon-wrench icon-white"></i> Tools</a></li>                        
+                        <li><a href="#contact"><i class="icon-envelope icon-white"></i> Contact</a></li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="intro">    
+            <div class="hero-unit">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <img class="img-polaroid" src="head_shot.png" width="130" height="140" />
+                    </div>
+                    <div class="span9">
+                        <p class="lead">Hey folks, Marlon here. I am a full stack web developer living in the San Francisco Bay Area with
+                        over five years of professional experience in Python, Java, HTML, CSS, and Javascript. I am also a
+                        pianist, aspiring photographer, karaoke regular, and enthusiastic foodie.</p>                
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <section id="work">
+            <h2>Workin' it</h2>
+            <p>I have had the pleasure of working on a variety of web projects, from simple mobile pages to an AJAX-driven analytics dashboard.</p>
+            <ul>
+                <li><a href="//gensler.com" target="_blank">Gensler</a></li>
+                <li><a href="//dishcrawl.com" target="_blank">Dishcrawl</a></li>
+                <li>via Questus:
+                    <ul>
+                        <li><a href="//hubzu.com" target="_blank">Hubzu</a></li>
+                        <li><a href="//geoex.com" target="_blank">GeoEx</a></li>
+                        <li><a href="//capitalonecup.com" target="_blank">Capital One Cup</a></li>
+                        <li><a href="//suzukicycles.com" target="_blank">Suzuki Cycles Dark Site (view between 11pm-2am)</a></li>
+                    </ul>
+                </li>
+                <li><a href="//playhaven.com" target="_blank">PlayHaven</a></li>
+                <li><a href="//snapguide.com" target="_blank">Snapguide</a></li>
+                <li><a href="//delicious.com" target="_blank">Delicious</a></li>
+                <li><a href="//web.archive.org/web/20110709124123/http://tap11.com/"
+                    target="_blank">Tap11 (from Wayback Machine)</a></li>
+                <li><a href="//web.archive.org/web/20110524111746/http://www.zannel.com/index.htm"
+                    target="_blank">Zannel (from Wayback Machine)</a></li>
+            </ul>                        
+        </section>
+        <hr/>         
+        <section id="tools">
+            <h2>Apps for Development</h2>
+            <p>Don't get me wrong; I don't mind developing using Linux tools,
+                but to increase my productivity and efficiency, I 
+                prefer to develop with these great tools:</p>
+
+            <ul>
+                <li><a href="http://jetbrains.com/pycharm" target="_blank">
+                    PyCharm</a></li>
+                <li><a href="http://jetbrains.com/idea" target="_blank">
+                    IntelliJ IDEA</a></li>
+                <li><a href="http://code.google.com/chrome/devtools/docs/overview.html"
+                    target="_blank">Chrome Developer Tools</a></li>
+                <li><a href="http://getfirebug.com" target="_blank">
+                    Firebug</a></li>
+                <li><a href="https://developers.google.com/speed/pagespeed" target="_blank">Google PageSpeed</a></li>
+                <li><a href="http://jshint.com" target="_blank">JSHint</a></li>                
+                <li><a href="http://jsbeautifier.org" target="_blank">JSBeautifier</a></li>
+                <li><a href="http://www.adobe.com/products/photoshopfamily.html" 
+                    target="_blank">Adobe Photoshop</a></li>
+                <li><a href="http://gimp.org" target="_blank">GIMP</a></li>
+                <li><a href="http://imageoptim.com" target="_blank">ImageOptim</a></li>
+                <li><a href="http://spritecow.com" target="_blank">SpriteCow</a></li>
+            </ul> 
+        </section>            
+        <hr/>
+        <section id="contact">
+            <h2>Got something to say?</h2>
+            <p>Feel free to contact me via the links below, and I will get back to you as soon as I can. Thanks for visiting!</p>
+        </section>
+    </div> <!-- /container -->
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="navbar-inner">
+            <div class="container">
+                <span class="brand">@</span>
+                <ul class="nav">
+                    <li><a href="mailto:icecold29@gmail.com" target="_blank">email</a></li>
+                    <li><a href="//linkedin.com/in/marlone" target="_blank">linkedin</a></li>
+                    <li><a href="//twitter.com/MForMarlon" target="_blank">twitter</a></li>
+                    <li><a href="//facebook.com/sjsharktank" target="_blank">facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36122170-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+</html>
